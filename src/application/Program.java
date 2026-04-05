@@ -1,7 +1,5 @@
 package application;
-
 import entities.Triangulo;
-
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -26,16 +24,14 @@ public class Program {
         y.b = sc.nextDouble();
         y.c = sc.nextDouble();
 
-        double px = (x.a + x.b + x.c)/2;
-        double areax = Math.sqrt(px*(px-x.a)*(px-x.b)*(px-x.c));
+        double areaX = x.area();
 
-        double py = (y.a + y.b + y.c)/2;
-        double areay = Math.sqrt(py*(py-y.a)*(py-y.b)*(py-y.c));
+        double areaY = y.area();
 
-        System.out.printf("Triângulo x area: %.4f\n", areax);
-        System.out.printf("entities.Triangulo y area:  %.4f\n", areay);
+        System.out.printf("Triângulo x area: %.4f\n", areaX);
+        System.out.printf("entities.Triangulo y area:  %.4f\n", areaY);
 
-        if (areax > areay){
+        if (areaX > areaY){
             System.out.println("Maior área: x");
         }
         else{
